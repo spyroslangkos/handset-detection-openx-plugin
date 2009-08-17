@@ -1,0 +1,95 @@
+{*<!--
+
++---------------------------------------------------------------------------+
+| Openads v2.8                                                              |
+| ============                                                              |
+|                                                                           |
+| Copyright (c) 2003-2007 Openads Limited                                   |
+| For contact details, see: http://www.openads.org/                         |
+|                                                                           |
+| Copyright (c) 2000-2003 the phpAdsNew developers                          |
+| For contact details, see: http://www.phpadsnew.com/                       |
+|                                                                           |
+| This program is free software; you can redistribute it and/or modify      |
+| it under the terms of the GNU General Public License as published by      |
+| the Free Software Foundation; either version 2 of the License, or         |
+| (at your option) any later version.                                       |
+|                                                                           |
+| This program is distributed in the hope that it will be useful,           |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of            |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             |
+| GNU General Public License for more details.                              |
+|                                                                           |
+| You should have received a copy of the GNU General Public License         |
+| along with this program; if not, write to the Free Software               |
+| Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA |
++---------------------------------------------------------------------------+
+$Id: market-signup.html 34688 2009-04-01 16:18:28Z andrew.hill $
+
+-->*}
+
+<div class="content">
+
+{if $hasServerError}
+  <div class='form-message form-message-error' id="server-errors" >
+    {$errorMessage}
+  </div>
+{/if}
+
+
+{if $norecord}
+<table id="handset-table" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <thead>
+	<tr height="25">
+		<td colspan="5" class="first" style="width: 100%"> {$link_text} </td>
+	</tr>
+	<tr>
+		<td colspan="5" class="first" style="width: 100%"> &raquo; <a target='_blank' href='{$url}'>{$displayname}</a> </td>
+	</tr>
+
+  </thead>
+</table>
+{/if}
+<hr />
+<br />
+  {*signup form
+  {include file=$oaTemplateDir|cat:'form/form.html' form=$form}
+*}
+  {include file='form/mobileform.html' form=$form}
+  {*/signup form*}
+
+
+</div>
+
+<script type="text/javascript" src="{$adminPluginWebPath}/oxMarket/js/ox.market.js" ></script>
+<script type="text/javascript">
+{literal}
+<!--
+  $(document).ready(function() {
+    $("#handsetdetection")
+    .initForm({
+        rules: {
+            "husername"	: { "required": true, "email": true },
+            "hsecret"	: { "required": true },
+            "hapikey"	: { "required": true }
+        },
+
+        messages: {
+            "husername": {
+                "required": {/literal}"{$account_question_required_message}"{literal} 
+            },
+            "hsecret": {
+                "required": {/literal}"{$login_field_label} is required"{literal} 
+            },
+            "hapikey": {
+                "required": {/literal}"{$password_field_label} is required"{literal} 
+            }
+        }
+    });
+  });
+-->
+{/literal}
+</script>
+
+
+{$trackerFrame}

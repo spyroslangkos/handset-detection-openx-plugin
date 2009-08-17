@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+
+<plugin>
+    <name>openXMobileAds</name>
+    <creationDate>2009-06-04</creationDate>
+    <author>Nouman Arshad</author>
+    <authorEmail>theshadowalone@hotmail.com</authorEmail>
+    <authorUrl>http://www.computedsynergy.com</authorUrl>
+    <license>license.txt</license>
+    <description>Handset Detection Mobile Ads Plugin( Powered by: www.computedsynergy.com)</description>
+    <version>0.1.0 </version>
+    <type>package</type>
+
+    <install>
+
+        <files>
+            <file path="{PLUGINPATH}">openXMobileAds.readme.txt</file>
+	    <file path="{PLUGINPATH}">openXMobileAds.uninstall.txt</file>
+        </files>
+
+        <contents>
+            <group name="oxInvocationTags">1</group>
+	    <group name="oxMobileAds">2</group>
+        </contents>
+
+    </install>
+
+    <readme>
+
+    </readme>
+
+</plugin>

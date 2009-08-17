@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+<plugin>
+	<name>oxMobileAds</name>
+	<creationDate>2009-02-16</creationDate>
+	<author>Nouman Arshad</author>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.handsetdetection.com</authorUrl>
+	<license>licence.txt</license>
+	<description> Handset Detection - Mobile Ads/Banners Plugin (www.handsetdetection.com)</description>
+	<version>0.0.1</version>
+	<oxversion>2.7.28-beta</oxversion>
+	<extends>admin</extends>
+	<install>
+		<files>
+			<file path="{ADMINPATH}/templates/form/">forms.html</file>
+			<file path="{ADMINPATH}/templates/form/">generals-errors.html</file>
+			<file path="{ADMINPATH}/templates/form/">mobileform.html</file>
+			<file path="{ADMINPATH}/templates/">handsetdetection.html</file>
+			<file path="{ADMINPATH}/templates/">mobile-banner-index.html</file>
+			<file path="{ADMINPATH}/templates/">mobile-banner-edit.html</file>
+			<file path="{ADMINPATH}/templates/">mobile-banner-index-list.html</file>
+			<file path="{ADMINPATH}/templates/">zones-edit.html</file>
+			<file path="{ADMINPATH}/templates/">zones-index.html</file>
+			<file path="{ADMINPATH}/templates/">zones-index-list.html</file>
+
+			<file path="{ADMINPATH}/">affiliate-zones.php</file>
+			<file path="{ADMINPATH}/">banner-edit.php</file>
+			<file path="{ADMINPATH}/">campaign-banners.php</file>
+			<file path="{ADMINPATH}/">class.wsse.php</file>
+			<file path="{ADMINPATH}/">enc.functions.php</file>
+			<file path="{ADMINPATH}/">handsetdetection.api.php</file>
+			<file path="{ADMINPATH}/">handsetdetection.config.php</file>
+			<file path="{ADMINPATH}/">handsetdetection.mobileconfig.php</file>
+			<file path="{ADMINPATH}/">handsetdetection.php</file>
+			<file path="{ADMINPATH}/">zone-edit.php</file>
+
+		</files>
+		
+		<components>
+			<component>
+				<name>oxMobileAds</name>
+			</component>
+		</components>
+
+		<navigation>
+			<admin>
+				<menu addto="account-index" index="handsetdetection" link="plugins/oxMobileAds/handsetdetection.php">Handset Detection Configuration </menu>
+			</admin>
+			<manager>
+				<menu addto="account-index"		index="handsetdetection" 	link="plugins/oxMobileAds/handsetdetection.php"	>	Handset Detection Configuration </menu>
+				<menu addto="inventory" 		index="campaigns-banners" 	link="plugins/oxMobileAds/campaign-banners.php"	>	Mobile Banners		</menu>
+				<menu addto="inventory" 		index="affiliates-zones" 	link="plugins/oxMobileAds/affiliate-zones.php"	>	Mapping Mobile Zones		</menu>
+			</manager>
+			<trafficker>
+				<menu addto="account-index" index="handsetdetection" link="plugins/oxMobileAds/handsetdetection.php">Handset Detection Configuration</menu>
+			</trafficker>
+		</navigation>
+		<schema>
+			<mdb2schema>tables_oxMobileAds</mdb2schema>
+			<dboschema>db_schema</dboschema>
+			<dbolinks>db_schema.links</dbolinks>
+			<dataobject>Handsetdetection.php</dataobject>
+			<dataobject>Mobilezones.php</dataobject>
+		</schema>
+		
+
+	</install>
+	
+</plugin>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="xsl/mdb2_schema.xsl"?>
+<database>
+
+ <name>oxMobileAds</name>
+ <create>yes</create>
+ <overwrite>false</overwrite>
+ <version>001</version>
+ <status>final</status>
+
+ <table>
+
+  <name>handsetdetection</name>
+
+  <declaration>
+
+   <field>
+    <name>id</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>true</notnull>
+    <default></default>
+    <autoincrement>1</autoincrement>
+   </field>
+
+   <field>
+    <name>user_id</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>husername</name>
+    <type>openads_varchar</type>
+    <length>50</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+	<field>
+		<name>hsecret</name>
+		<type>openads_varchar</type>
+		<length>50</length>
+		<notnull>false</notnull>
+		<default>null</default>
+	</field>
+
+   <field>
+	   <name>hapikey</name>
+	   <type>openads_varchar</type>
+	   <length>50</length>
+	   <notnull>false</notnull>
+	   <default>null</default>
+   </field>
+
+   
+   <index>
+    <name>handsetdetection_pkey</name>
+    <primary>true</primary>
+    <field>
+     <name>id</name>
+     <sorting>ascending</sorting>
+    </field>
+   </index>
+
+  </declaration>
+
+ </table>
+  <table>
+
+  <name>mobilezones</name>
+
+  <declaration>
+
+   <field>
+    <name>id</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>true</notnull>
+    <default></default>
+    <autoincrement>1</autoincrement>
+   </field>
+
+   <field>
+    <name>masterzoneid</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>mz1</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>mz2</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>mz3</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>mz4</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+   <field>
+    <name>mz5</name>
+    <type>openads_int</type>
+    <length>11</length>
+    <notnull>false</notnull>
+    <default>null</default>
+   </field>
+
+
+   
+   <index>
+    <name>mobilezones_pkey</name>
+    <primary>true</primary>
+    <field>
+     <name>id</name>
+     <sorting>ascending</sorting>
+    </field>
+   </index>
+
+  </declaration>
+
+ </table>
+
+
+
+</database>

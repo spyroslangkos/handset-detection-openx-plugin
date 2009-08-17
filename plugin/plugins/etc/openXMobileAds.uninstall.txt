@@ -1,0 +1,1 @@
+Warning! Uninstalling this plugin will delete all local information relating to your use of the Handset Detection.
